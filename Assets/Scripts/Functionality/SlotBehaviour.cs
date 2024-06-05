@@ -109,9 +109,6 @@ public class SlotBehaviour : MonoBehaviour
     [SerializeField]
     private GameObject Image_Prefab;    //icons prefab
 
-    [SerializeField]
-    private PayoutCalculation PayCalculator;
-
     private List<Tweener> alltweens = new List<Tweener>();
 
 
@@ -280,30 +277,6 @@ public class SlotBehaviour : MonoBehaviour
     internal void FetchLines(string LineVal, int count)
     {
         y_string.Add(count, LineVal);
-    }
-
-    //Generate Static Lines from button hovers
-    internal void GenerateStaticLine(TMP_Text LineID_Text)
-    {
-        DestroyStaticLine();
-        int LineID = 1;
-        try
-        {
-            LineID = int.Parse(LineID_Text.text);
-        }
-        catch (Exception e)
-        {
-            Debug.Log("Exception while parsing " + e.Message);
-        }
-        List<int> y_points = null;
-        y_points = y_string[LineID]?.Split(',')?.Select(Int32.Parse)?.ToList();
-        PayCalculator.GeneratePayoutLinesBackend(y_points, y_points.Count, true);
-    }
-
-    //Destroy Static Lines from button hovers
-    internal void DestroyStaticLine()
-    {
-        PayCalculator.ResetStaticLine();
     }
 
     private void MaxBet()
@@ -692,7 +665,6 @@ public class SlotBehaviour : MonoBehaviour
                             Tempimages[k].MiniImages[y_anim[k]].gameObject.SetActive(false);
                         }
                     }
-                    PayCalculator.ResetStaticLine();
                 }
                 for (int i = 0; i < TempLineIds.Count; i++)
                 {
@@ -849,7 +821,6 @@ public class SlotBehaviour : MonoBehaviour
             for (int i = 0; i < LineId.Count; i++)
             {
                 y_points = y_string[LineId[i]+1]?.Split(',')?.Select(Int32.Parse)?.ToList();
-                PayCalculator.GeneratePayoutLinesBackend(y_points, y_points.Count);
             }
 
             if (jackpot > 0)

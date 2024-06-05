@@ -9716,55 +9716,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!1 &963807276
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 963807278}
-  - component: {fileID: 963807277}
-  m_Layer: 0
-  m_Name: PayoutManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &963807277
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963807276}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 23c2d218303904f8b89a581d384e3778, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  x_Distance: 175
-  y_Distance: 170
-  LineContainer: {fileID: 0}
-  Line_Prefab: {fileID: 1141521666132180400, guid: 95e0640a1aceb43ce952186ee810e809, type: 3}
-  InitialLinePosition: {x: -350, y: 170}
---- !u!4 &963807278
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963807276}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 729.5507, y: 765.6248, z: -20.666212}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &973463259
 GameObject:
   m_ObjectHideFlags: 0
@@ -19394,7 +19345,7 @@ MonoBehaviour:
   MainDisplayText: {fileID: 1421336897}
   uiManager: {fileID: 377874625}
   Image_Prefab: {fileID: 595047196131445314, guid: 04c659a2f5ec249f5be006eb52752781, type: 3}
-  PayCalculator: {fileID: 963807277}
+  PayCalculator: {fileID: 0}
   TempList: []
   TempListImg: []
   IconSizeFactor: 235
@@ -20312,7 +20263,6 @@ SceneRoots:
   - {fileID: 51930704}
   - {fileID: 1571308677}
   - {fileID: 2046803209}
-  - {fileID: 963807278}
   - {fileID: 377874624}
   - {fileID: 500036491}
   - {fileID: 963234755}
