@@ -1,6 +1,8 @@
-
 name: Unity WebGL Automatic Build 👽✨🚀
 on:
+  push:
+    branches:
+      - 'main'
   pull_request:
     branches:    
       - 'main'
@@ -77,4 +79,3 @@ jobs:
           git status
           git commit -m "Build"
           git push origin HEAD:main
-
